@@ -19,7 +19,7 @@ setInterval(lvivTime, 1000);
 function sydneyTime() {
 let sydneyDate = document.querySelector("#sydney-date");
 let sydney = document.querySelector("#sydney");
-let syd = moment().tz("Australia/Sydney").format("MMM Do YY");
+let syd = moment().tz("Australia/Sydney").format("MMM Do, YYYY");
 let sydneyTime = moment().tz("Australia/Sydney").format("h:mm:ss A");
 
 sydneyDate.innerHTML = syd;
