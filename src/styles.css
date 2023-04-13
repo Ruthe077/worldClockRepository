@@ -34,7 +34,10 @@ footer {
 .static-cities {
     column-count: 2;
 }
-.class {
+.time {
     font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
+}
+.date {
+    font-size: 12px;
 }
