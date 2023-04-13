@@ -22,3 +22,7 @@ h3 {
 footer {
     text-align: center;
 }
+
+.static-cities {
+    column-count: 2;
+}
