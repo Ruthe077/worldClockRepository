@@ -17,9 +17,12 @@ lviv.innerHTML = lvivTime;
 setInterval(lvivTime, 1000);
 
 function sydneyTime() {
+let sydneyDate = document.querySelector("#sydney-date");
 let sydney = document.querySelector("#sydney");
+let syd = moment().tz("Australia/Sydney").format("MMM Do YY");
 let sydneyTime = moment().tz("Australia/Sydney").format("h:mm:ss A");
 
+sydneyDate.innerHTML = syd;
 sydney.innerHTML = sydneyTime;
 }
 setInterval(sydneyTime, 1000);
