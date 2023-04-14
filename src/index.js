@@ -35,33 +35,33 @@ setInterval(sydneyTime, 1000);
 
 
 //javascript for select element
-   function alertTime(event) {
-        let bostonTime = moment()
-          .tz("America/New_York")
+   function displayTime(event) {
+        let anchorageTime = moment()
+          .tz("America/Anchorage")
           .format("dddd, MMMM D, YYYY h:m A");
-        let honoluluTime = moment()
-          .tz("Pacific/Honolulu")
+        let singaporeTime = moment()
+          .tz("Asia/Singapore")
           .format("dddd, MMMM D, YYYY h:m A");
-        let lvivTime = moment()
-          .tz("Europe/Kiev")
+        let tokyoTime = moment()
+          .tz("Asia/Tokyo")
           .format("dddd, MMMM D, YYYY h:m A");
-        let localTime = moment.tz.guess();
+        let currentLocation = moment.tz.guess();
 
         if (event.target.value.length > 0) {
-          if (event.target.value === "boston") {
-            alert(`It is ${bostonTime} in Boston, USA`);
+          if (event.target.value === "anchorage") {
+            alert(`It is ${anchorageTime} in Boston, USA`);
           }
-          if (event.target.value === "honolulu") {
-            alert(`It is ${honoluluTime} in Honolulu, USA`);
+          if (event.target.value === "singapore") {
+            alert(`It is ${singaporeTime} in Honolulu, USA`);
           }
-          if (event.target.value === "lviv") {
-            alert(`It is ${lvivTime} in Lviv, Ukraine`);
+          if (event.target.value === "tokyo") {
+            alert(`It is ${tokyoTime} in Lviv, Ukraine`);
           }
-          if (event.target.value === "local") {
-            alert(`The local timezone is ${localTime}`);
+          if (event.target.value === "current") {
+            alert(`The local timezone is ${currentLocation}`);
           }
         }
       }
 
-      let citySelect = document.querySelector("#timezones");
-      citySelect.addEventListener("change", alertTime);
+      let citySelect = document.querySelector("#cities");
+      citySelect.addEventListener("change", displayTime);
