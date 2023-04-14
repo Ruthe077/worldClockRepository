@@ -95,35 +95,17 @@ setInterval(sydneyTime, 1000);
      
         if (event.target.value.length > 0) {
           if (event.target.value === "anchorage") {
-        
-        clearInterval(tokyoDisplay, 1000);
-        clearInterval(currentDisplay, 1000);
-        clearInterval(singaporeDisplay, 1000);
-
-        setInterval(anchorageDisplay, 1000);
-        
+        anchorageDisplay();
           }
           if (event.target.value === "singapore") {
-        clearInterval(tokyoDisplay, 1000);
-        clearInterval(currentDisplay, 1000);
-        clearInterval(anchorageDisplay, 1000);
-
-        setInterval(singaporeDisplay, 1000);
+        singaporeDisplay();
             
           }
           if (event.target.value === "tokyo") {
-        clearInterval(anchorageDisplay, 1000);
-        clearInterval(currentDisplay, 1000);
-        clearInterval(singaporeDisplay, 1000);
-
-        setInterval(tokyoDisplay, 1000);
+            tokyoDisplay();
           }
           if (event.target.value === "current") {
-        clearInterval(tokyoDisplay, 1000);
-        clearInterval(anchorageDisplay, 1000);
-        clearInterval(singaporeDisplay, 1000);
-
-        setInterval(currentDisplay, 1000);
+        currentDisplay();
           }
         }
       }
