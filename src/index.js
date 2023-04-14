@@ -46,6 +46,9 @@ setInterval(sydneyTime, 1000);
         date.innerHTML = anchorageDate;
         time.innerHTML = anchorageTime;
         place.innerHTML = anchoragePlace;
+        clearInterval(setCurrent);
+        clearInterval(setTokyo);
+        clearInterval(setSingapore);
     }
    
     function singaporeDisplay() {
@@ -59,6 +62,9 @@ setInterval(sydneyTime, 1000);
         date.innerHTML = singaporeDate;
         time.innerHTML = singaporeTime;
         place.innerHTML = singaporePlace;
+        clearInterval(setAnchorage);
+        clearInterval(setTokyo);
+        clearInterval(setCurrent);
     }
     function tokyoDisplay() {
        let tokyoTime = moment()
@@ -71,6 +77,9 @@ setInterval(sydneyTime, 1000);
         date.innerHTML = tokyoDate;
         time.innerHTML = tokyoTime;
         place.innerHTML = tokyoPlace;
+        clearInterval(setAnchorage);
+        clearInterval(setCurrent);
+        clearInterval(setSingapore);
     }
     function currentDisplay() {
        let currentTime = moment()
@@ -83,6 +92,9 @@ setInterval(sydneyTime, 1000);
         date.innerHTML = currentDate;
         time.innerHTML = currentTime;
         place.innerHTML = currentPlace;
+        clearInterval(setAnchorage);
+        clearInterval(setTokyo);
+        clearInterval(setSingapore);
     }
 
    function displayTime(event) {
@@ -90,19 +102,23 @@ setInterval(sydneyTime, 1000);
 
         if (event.target.value.length > 0) {
           if (event.target.value === "anchorage") {
-            setInterval(anchorageDisplay, 1000);
+            setAnchorage;
           }
-          else if (event.target.value === "singapore") {
-            setInterval(singaporeDisplay, 1000);
+          if (event.target.value === "singapore") {
+            setSingapore;
           }
-          else if (event.target.value === "tokyo") {
-            setInterval(tokyoDisplay, 1000);
+          if (event.target.value === "tokyo") {
+            setTokyo;
           }
-          else (event.target.value === "current") {
-            setInterval(currentDisplay, 1000);
+          if (event.target.value === "current") {
+            setCurrent;
           }
         }
       }
+      let setSingapore = setInterval(singaporeDisplay, 1000);
+      let setTokyo = setInterval(tokyoDisplay, 1000);
+      let setCurrent = setInterval(currentDisplay, 1000);
+      let setAnchorage = setInterval(anchorageDisplay, 1000);
       let date = document.querySelector("#new-date");
       let time = document.querySelector("#current-time");
       let place = document.querySelector("#place");
