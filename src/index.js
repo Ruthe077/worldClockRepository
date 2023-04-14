@@ -92,38 +92,38 @@ setInterval(sydneyTime, 1000);
     }
 
    function displayTime(event) {
-     let setSingapore = setInterval(singaporeDisplay, 1000);
-      let setTokyo = setInterval(tokyoDisplay, 1000);
-      let setCurrent = setInterval(currentDisplay, 1000);
-      let setAnchorage = setInterval(anchorageDisplay, 1000);
-    
-
+     
         if (event.target.value.length > 0) {
           if (event.target.value === "anchorage") {
         
-        clearInterval(setCurrent);
-        clearInterval(setTokyo);
-        clearInterval(setSingapore);
+        clearInterval(tokyoDisplay, 1000);
+        clearInterval(currentDisplay, 1000);
+        clearInterval(singaporeDisplay, 1000);
+
         setInterval(anchorageDisplay, 1000);
         
           }
           if (event.target.value === "singapore") {
-            setSingapore;
-               clearInterval(setAnchorage);
-        clearInterval(setTokyo);
-        clearInterval(setCurrent);
+        clearInterval(tokyoDisplay, 1000);
+        clearInterval(currentDisplay, 1000);
+        clearInterval(anchorageDisplay, 1000);
+
+        setInterval(singaporeDisplay, 1000);
+            
           }
           if (event.target.value === "tokyo") {
-            setTokyo;
-             clearInterval(setAnchorage);
-        clearInterval(setCurrent);
-        clearInterval(setSingapore);
+        clearInterval(anchorageDisplay, 1000);
+        clearInterval(currentDisplay, 1000);
+        clearInterval(singaporeDisplay, 1000);
+
+        setInterval(tokyoDisplay, 1000);
           }
           if (event.target.value === "current") {
-            setCurrent;
-            clearInterval(setAnchorage);
-        clearInterval(setTokyo);
-        clearInterval(setSingapore);
+        clearInterval(tokyoDisplay, 1000);
+        clearInterval(anchorageDisplay, 1000);
+        clearInterval(singaporeDisplay, 1000);
+
+        setInterval(currentDisplay, 1000);
           }
         }
       }
