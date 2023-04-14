@@ -38,7 +38,10 @@ setInterval(sydneyTime, 1000);
    function displayTime(event) {
         let anchorageTime = moment()
           .tz("America/Anchorage")
-          .format("dddd, MMMM D, YYYY h:m A");
+          .format("h:mm:ss A");
+        let anchorageDate = moment()
+          .tz("America/Anchorage")
+          .format("dddd, MMMM D, YYYY");
         let singaporeTime = moment()
           .tz("Asia/Singapore")
           .format("dddd, MMMM D, YYYY h:m A");
@@ -49,7 +52,8 @@ setInterval(sydneyTime, 1000);
 
         if (event.target.value.length > 0) {
           if (event.target.value === "anchorage") {
-            alert(`It is ${anchorageTime} in Anchorage, USA`);
+            date.innerHTML = anchorageDate;
+            time.innerHTML = anchorageTime;
           }
           if (event.target.value === "singapore") {
             alert(`It is ${singaporeTime} in Singapore, Singapore`);
