@@ -84,7 +84,7 @@ button.addEventListener("click", refreshPage);
        
     }
     function currentDisplay() {
-       let currentTime = moment.format("h:mm:ss A");
+       let currentTime = moment().format("h:mm:ss A");
         let currentDate = moment()
           .format("dddd, MMMM D, YYYY");
         let currentPlace = moment.tz.guess();
