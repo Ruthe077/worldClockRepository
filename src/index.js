@@ -68,8 +68,8 @@ setInterval(sydneyTime, 1000);
           }
         }
       }
-      let date = document.querySelector("#houston-date");
-      let time = document.querySelector("#houston");
+      let date = document.querySelector("#new-date");
+      let time = document.querySelector("#current-time");
       let place = document.querySelector("#place");
       let citySelect = document.querySelector("#cities");
       citySelect.addEventListener("change", displayTime);
