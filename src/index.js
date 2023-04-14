@@ -102,6 +102,12 @@ button.addEventListener("click", refreshPage);
         if (event.target.value.length > 0) {
           if (event.target.value === "anchorage") {
         anchorageDisplay();
+        one.innerHTML = "";
+        two.innerHTML = "";
+        three.innerHTML = "";
+        four.innerHTML = "";
+        five.innerHTML = "";
+        six.innerHTML = "";
           }
           if (event.target.value === "singapore") {
         singaporeDisplay();
@@ -116,6 +122,12 @@ button.addEventListener("click", refreshPage);
         }
       }
       
+      let one = document.querySelector("#one");
+      let two = document.querySelector("#two");
+      let three = document.querySelector("#three");
+      let four = document.querySelector("#four");
+      let five = document.querySelector("#five");
+      let six = document.querySelector("#six");
       let date = document.querySelector("#new-date");
       let time = document.querySelector("#current-time");
       let place = document.querySelector("#place");
