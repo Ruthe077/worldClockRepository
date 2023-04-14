@@ -35,16 +35,22 @@ setInterval(sydneyTime, 1000);
 
 
 //javascript for select element
-   
-
-   function displayTime(event) {
-        let anchorageTime = moment()
+    function anchorageDisplay() {
+       let anchorageTime = moment()
           .tz("America/Anchorage")
           .format("h:mm:ss A");
         let anchorageDate = moment()
           .tz("America/Anchorage")
           .format("dddd, MMMM D, YYYY");
         let anchoragePlace = "Anchorage 🇺🇸";
+        date.innerHTML = anchorageDate;
+        time.innerHTML = anchorageTime;
+        place.innerHTML = anchoragePlace;
+    }
+   
+
+   function displayTime(event) {
+    
         let singaporeTime = moment()
           .tz("Asia/Singapore")
           .format("dddd, MMMM D, YYYY h:m A");
@@ -55,10 +61,7 @@ setInterval(sydneyTime, 1000);
 
         if (event.target.value.length > 0) {
           if (event.target.value === "anchorage") {
-            date.innerHTML = anchorageDate;
-            time.innerHTML = anchorageTime;
-            place.innerHTML = anchoragePlace;
-            setInterval(anchorageTime, 1000);
+            setInterval(anchorageDisplay, 1000);
           }
           if (event.target.value === "singapore") {
             alert(`It is ${singaporeTime} in Singapore, Singapore`);
