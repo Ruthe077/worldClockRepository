@@ -45,3 +45,11 @@ footer {
 .date {
     font-size: 20px;
 }
+#all-cities {
+    padding: 10px;
+    border-radius: 9px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #f2f4fb;
+    font-family: monospace;
+}
