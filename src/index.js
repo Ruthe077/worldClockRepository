@@ -92,13 +92,13 @@ setInterval(sydneyTime, 1000);
           if (event.target.value === "anchorage") {
             setInterval(anchorageDisplay, 1000);
           }
-          if (event.target.value === "singapore") {
+          else if (event.target.value === "singapore") {
             setInterval(singaporeDisplay, 1000);
           }
-          if (event.target.value === "tokyo") {
+          else if (event.target.value === "tokyo") {
             setInterval(tokyoDisplay, 1000);
           }
-          if (event.target.value === "current") {
+          else (event.target.value === "current") {
             setInterval(currentDisplay, 1000);
           }
         }
