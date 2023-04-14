@@ -49,19 +49,23 @@ setInterval(sydneyTime, 1000);
 
         if (event.target.value.length > 0) {
           if (event.target.value === "anchorage") {
-            alert(`It is ${anchorageTime} in Boston, USA`);
+            alert(`It is ${anchorageTime} in Anchorage, USA`);
           }
           if (event.target.value === "singapore") {
-            alert(`It is ${singaporeTime} in Honolulu, USA`);
+            alert(`It is ${singaporeTime} in Singapore, Singapore`);
           }
           if (event.target.value === "tokyo") {
-            alert(`It is ${tokyoTime} in Lviv, Ukraine`);
+            alert(`It is ${tokyoTime} in Tokyo, Japan`);
           }
           if (event.target.value === "current") {
-            alert(`The local timezone is ${currentLocation}`);
+            alert(`The time in your current location is ${currentLocation}`);
           }
         }
       }
 
       let citySelect = document.querySelector("#cities");
       citySelect.addEventListener("change", displayTime);
+
+
+      //javascript for button to view all cities
+
