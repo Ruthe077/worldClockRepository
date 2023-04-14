@@ -32,6 +32,8 @@ sydneyDate.innerHTML = syd;
 sydney.innerHTML = sydneyTime;
 }
 setInterval(sydneyTime, 1000);
+//javascript for clearing other cities
+
 
 
 //javascript for select element
@@ -46,9 +48,7 @@ setInterval(sydneyTime, 1000);
         date.innerHTML = anchorageDate;
         time.innerHTML = anchorageTime;
         place.innerHTML = anchoragePlace;
-        clearInterval(setCurrent);
-        clearInterval(setTokyo);
-        clearInterval(setSingapore);
+       
     }
    
     function singaporeDisplay() {
@@ -62,9 +62,7 @@ setInterval(sydneyTime, 1000);
         date.innerHTML = singaporeDate;
         time.innerHTML = singaporeTime;
         place.innerHTML = singaporePlace;
-        clearInterval(setAnchorage);
-        clearInterval(setTokyo);
-        clearInterval(setCurrent);
+     
     }
     function tokyoDisplay() {
        let tokyoTime = moment()
@@ -77,9 +75,7 @@ setInterval(sydneyTime, 1000);
         date.innerHTML = tokyoDate;
         time.innerHTML = tokyoTime;
         place.innerHTML = tokyoPlace;
-        clearInterval(setAnchorage);
-        clearInterval(setCurrent);
-        clearInterval(setSingapore);
+       
     }
     function currentDisplay() {
        let currentTime = moment()
@@ -92,33 +88,46 @@ setInterval(sydneyTime, 1000);
         date.innerHTML = currentDate;
         time.innerHTML = currentTime;
         place.innerHTML = currentPlace;
-        clearInterval(setAnchorage);
-        clearInterval(setTokyo);
-        clearInterval(setSingapore);
+        
     }
 
    function displayTime(event) {
+     let setSingapore = setInterval(singaporeDisplay, 1000);
+      let setTokyo = setInterval(tokyoDisplay, 1000);
+      let setCurrent = setInterval(currentDisplay, 1000);
+      let setAnchorage = setInterval(anchorageDisplay, 1000);
     
 
         if (event.target.value.length > 0) {
           if (event.target.value === "anchorage") {
-            setAnchorage;
+        
+        clearInterval(setCurrent);
+        clearInterval(setTokyo);
+        clearInterval(setSingapore);
+        setInterval(anchorageDisplay, 1000);
+        
           }
           if (event.target.value === "singapore") {
             setSingapore;
+               clearInterval(setAnchorage);
+        clearInterval(setTokyo);
+        clearInterval(setCurrent);
           }
           if (event.target.value === "tokyo") {
             setTokyo;
+             clearInterval(setAnchorage);
+        clearInterval(setCurrent);
+        clearInterval(setSingapore);
           }
           if (event.target.value === "current") {
             setCurrent;
+            clearInterval(setAnchorage);
+        clearInterval(setTokyo);
+        clearInterval(setSingapore);
           }
         }
       }
-      let setSingapore = setInterval(singaporeDisplay, 1000);
-      let setTokyo = setInterval(tokyoDisplay, 1000);
-      let setCurrent = setInterval(currentDisplay, 1000);
-      let setAnchorage = setInterval(anchorageDisplay, 1000);
+      
       let date = document.querySelector("#new-date");
       let time = document.querySelector("#current-time");
       let place = document.querySelector("#place");
