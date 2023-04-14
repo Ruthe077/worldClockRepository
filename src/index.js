@@ -85,8 +85,8 @@ button.addEventListener("click", refreshPage);
     }
     function currentDisplay() {
        let currentTime = moment()
-          .tz("America/Anchorage")
-          .format("h:mm:ss A");
+          .tz.guess()
+        console.log(currentTime);
         let currentDate = moment()
           .tz("America/Anchorage")
           .format("dddd, MMMM D, YYYY");
