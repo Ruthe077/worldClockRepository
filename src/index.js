@@ -35,6 +35,8 @@ setInterval(sydneyTime, 1000);
 
 
 //javascript for select element
+   
+
    function displayTime(event) {
         let anchorageTime = moment()
           .tz("America/Anchorage")
@@ -56,6 +58,7 @@ setInterval(sydneyTime, 1000);
             date.innerHTML = anchorageDate;
             time.innerHTML = anchorageTime;
             place.innerHTML = anchoragePlace;
+            setInterval(anchorageTime, 1000);
           }
           if (event.target.value === "singapore") {
             alert(`It is ${singaporeTime} in Singapore, Singapore`);
