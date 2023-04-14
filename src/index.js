@@ -98,18 +98,42 @@ button.addEventListener("click", refreshPage);
         if (event.target.value.length > 0) {
           if (event.target.value === "anchorage") {
         anchorageDisplay();
+        one.classList.add("remove");
+        two.classList.add("remove");
+        three.classList.add("remove");
+        four.classList.add("remove");
+        five.classList.add("remove");
+        six.classList.add("remove");
         
           }
           if (event.target.value === "singapore") {
         singaporeDisplay();
+        one.classList.add("remove");
+        two.classList.add("remove");
+        three.classList.add("remove");
+        four.classList.add("remove");
+        five.classList.add("remove");
+        six.classList.add("remove");
          
           }
           if (event.target.value === "tokyo") {
             tokyoDisplay();
+            one.classList.add("remove");
+        two.classList.add("remove");
+        three.classList.add("remove");
+        four.classList.add("remove");
+        five.classList.add("remove");
+        six.classList.add("remove");
            
           }
           if (event.target.value === "current") {
         currentDisplay();
+        one.classList.add("remove");
+        two.classList.add("remove");
+        three.classList.add("remove");
+        four.classList.add("remove");
+        five.classList.add("remove");
+        six.classList.add("remove");
        
           }
         }
