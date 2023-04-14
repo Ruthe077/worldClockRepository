@@ -84,12 +84,10 @@ button.addEventListener("click", refreshPage);
        
     }
     function currentDisplay() {
-       let currentTime = moment.tz.guess()
-        console.log(currentTime);
+       let currentTime = moment.format("h:mm:ss A");
         let currentDate = moment()
-          .tz("America/Anchorage")
           .format("dddd, MMMM D, YYYY");
-        let currentPlace = "Anchorage 🇺🇸";
+        let currentPlace = moment.tz.guess();
         date.innerHTML = currentDate;
         time.innerHTML = currentTime;
         place.innerHTML = currentPlace;
