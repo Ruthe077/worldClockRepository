@@ -48,29 +48,58 @@ setInterval(sydneyTime, 1000);
         place.innerHTML = anchoragePlace;
     }
    
+    function singaporeDisplay() {
+       let singaporeTime = moment()
+          .tz("Asia/Singapore")
+          .format("h:mm:ss A");
+        let singaporeDate = moment()
+          .tz("Asia/Singapore")
+          .format("dddd, MMMM D, YYYY");
+        let singaporePlace = "Singapore 🇼🇸";
+        date.innerHTML = singaporeDate;
+        time.innerHTML = singaporeTime;
+        place.innerHTML = singaporePlace;
+    }
+    function tokyoDisplay() {
+       let tokyoTime = moment()
+          .tz("Asia/Tokyo")
+          .format("h:mm:ss A");
+        let tokyoDate = moment()
+          .tz("Asia/Tokyo")
+          .format("dddd, MMMM D, YYYY");
+        let tokyoPlace = "Tokyo 🇯🇵";
+        date.innerHTML = tokyoDate;
+        time.innerHTML = tokyoTime;
+        place.innerHTML = tokyoPlace;
+    }
+    function currentDisplay() {
+       let currentTime = moment()
+          .tz("America/Anchorage")
+          .format("h:mm:ss A");
+        let currentDate = moment()
+          .tz("America/Anchorage")
+          .format("dddd, MMMM D, YYYY");
+        let currentPlace = "Anchorage 🇺🇸";
+        date.innerHTML = currentDate;
+        time.innerHTML = currentTime;
+        place.innerHTML = currentPlace;
+    }
 
    function displayTime(event) {
     
-        let singaporeTime = moment()
-          .tz("Asia/Singapore")
-          .format("dddd, MMMM D, YYYY h:m A");
-        let tokyoTime = moment()
-          .tz("Asia/Tokyo")
-          .format("dddd, MMMM D, YYYY h:m A");
-        let currentLocation = moment.tz.guess();
 
         if (event.target.value.length > 0) {
           if (event.target.value === "anchorage") {
             setInterval(anchorageDisplay, 1000);
           }
           if (event.target.value === "singapore") {
-            alert(`It is ${singaporeTime} in Singapore, Singapore`);
+            setInterval(singaporeDisplay, 1000);
           }
           if (event.target.value === "tokyo") {
-            alert(`It is ${tokyoTime} in Tokyo, Japan`);
+            setInterval(tokyoDisplay, 1000);
           }
           if (event.target.value === "current") {
-            alert(`The time in your current location is ${currentLocation}`);
+            setInterval(currentDisplay, 1000);
           }
         }
       }
