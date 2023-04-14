@@ -111,13 +111,31 @@ button.addEventListener("click", refreshPage);
           }
           if (event.target.value === "singapore") {
         singaporeDisplay();
+         one.innerHTML = "";
+        two.innerHTML = "";
+        three.innerHTML = "";
+        four.innerHTML = "";
+        five.innerHTML = "";
+        six.innerHTML = "";
             
           }
           if (event.target.value === "tokyo") {
             tokyoDisplay();
+             one.innerHTML = "";
+        two.innerHTML = "";
+        three.innerHTML = "";
+        four.innerHTML = "";
+        five.innerHTML = "";
+        six.innerHTML = "";
           }
           if (event.target.value === "current") {
         currentDisplay();
+         one.innerHTML = "";
+        two.innerHTML = "";
+        three.innerHTML = "";
+        four.innerHTML = "";
+        five.innerHTML = "";
+        six.innerHTML = "";
           }
         }
       }
