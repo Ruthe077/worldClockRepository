@@ -34,6 +34,12 @@ sydney.innerHTML = sydneyTime;
 setInterval(sydneyTime, 1000);
 //javascript for clearing other cities
 
+function refreshPage() {
+  window.location.reload();
+}
+
+let button = document.querySelector("#all-cities");
+button.addEventListener("click", refreshPage);
 
 
 //javascript for select element
