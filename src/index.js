@@ -104,7 +104,7 @@ button.addEventListener("click", refreshPage);
         four.classList.add("remove");
         five.classList.add("remove");
         six.classList.add("remove");
-      city.classList.add("remove");
+      
         
           }
           if (event.target.value === "singapore") {
@@ -115,7 +115,7 @@ button.addEventListener("click", refreshPage);
         four.classList.add("remove");
         five.classList.add("remove");
         six.classList.add("remove");
-       city.classList.add("remove");
+     
          
           }
           if (event.target.value === "tokyo") {
@@ -126,7 +126,7 @@ button.addEventListener("click", refreshPage);
         four.classList.add("remove");
         five.classList.add("remove");
         six.classList.add("remove");
-       city.classList.add("remove");
+       
            
           }
           if (event.target.value === "current") {
