@@ -104,7 +104,7 @@ button.addEventListener("click", refreshPage);
         four.classList.add("remove");
         five.classList.add("remove");
         six.classList.add("remove");
-      
+      hThree.classList.add("remove");
         
           }
           if (event.target.value === "singapore") {
@@ -115,7 +115,7 @@ button.addEventListener("click", refreshPage);
         four.classList.add("remove");
         five.classList.add("remove");
         six.classList.add("remove");
-     
+     hThree.classList.add("remove");
          
           }
           if (event.target.value === "tokyo") {
@@ -126,7 +126,7 @@ button.addEventListener("click", refreshPage);
         four.classList.add("remove");
         five.classList.add("remove");
         six.classList.add("remove");
-       
+       hThree.classList.add("remove");
            
           }
           if (event.target.value === "current") {
@@ -137,7 +137,7 @@ button.addEventListener("click", refreshPage);
         four.classList.add("remove");
         five.classList.add("remove");
         six.classList.add("remove");
-       
+       hThree.classList.add("remove");
           }
         }
       }
@@ -151,7 +151,7 @@ button.addEventListener("click", refreshPage);
       let date = document.querySelector("#new-date");
       let time = document.querySelector("#current-time");
       let place = document.querySelector("#place");
-      
+      let hThree = document.querySelector("#h-three");
       let citySelect = document.querySelector("#cities");
       citySelect.addEventListener("change", displayTime);
 
