@@ -45,6 +45,10 @@ footer {
     font-family: 'Courier New', Courier, monospace;
     padding-bottom: 10px;
 }
+.city {
+    font-size: 40px;
+    color:#f8b500;
+}
 .date {
     font-size: 20px;
 }
