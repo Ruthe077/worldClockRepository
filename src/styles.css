@@ -6,7 +6,7 @@ body {
     max-width: 936px;
 }
 .container {
-    display: block;
+    align-items: center;
     margin: 0 auto;
     text-align: center;
     font-family: monospace;
@@ -15,7 +15,7 @@ body {
     margin: 40px;
     color: white;
     min-width: 916px;
-    max-width: 65%;
+  
 }
 select {
     margin-top: 10px;
