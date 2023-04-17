@@ -11,6 +11,7 @@ body {
     background-color: #5e227f;
     margin: 140px;
     padding-bottom: 10px;
+    color: white;
 }
 select {
     margin-top: 10px;
@@ -42,12 +43,10 @@ footer {
 .time {
     font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
-    color: white;
     padding-bottom: 10px;
 }
 .date {
     font-size: 20px;
-    color: white;
 }
 #place {
     color:#f8b500;
