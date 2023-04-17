@@ -151,7 +151,7 @@ button.addEventListener("click", refreshPage);
       let date = document.querySelector("#new-date");
       let time = document.querySelector("#current-time");
       let place = document.querySelector("#place");
-      let city = document.querySelector("#city");
+      
       let citySelect = document.querySelector("#cities");
       citySelect.addEventListener("change", displayTime);
 
