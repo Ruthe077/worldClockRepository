@@ -7,12 +7,11 @@ body {
 }
 .container {
     display: block;
-    justify-content: center;
+    margin: 0 auto;
     text-align: center;
     font-family: monospace;
     border-radius: 15px;
     background-color: #5e227f;
-    margin: 40px;
     color: white;
     min-width: 916px;
   
